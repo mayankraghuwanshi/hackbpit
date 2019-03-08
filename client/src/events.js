@@ -1,5 +1,6 @@
 module.exports = {
     SET_USER : "SET_USER",
-    JOIN_GROUP : "JOIN_GROUP"
-
+    UPDATE_SCORE : "UPDATE_SCORE",
+    JOIN_GROUP : "JOIN_GROUP",
+    UPDATE_USERS : "UPDATE_USERS"
 }

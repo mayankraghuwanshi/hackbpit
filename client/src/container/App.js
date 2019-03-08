@@ -8,6 +8,7 @@ import Login2 from "../components/login2";
 //import Question from "../components/question";
 import Question2 from "../components/question2";
 import Dashboard from "../components/dashboard";
+import Learn from "../components/learn";
 //helper functions
 const {getData} = require('../helper')
 
@@ -64,30 +65,26 @@ class App extends Component {
   }
 
   changeQuestion(score , timeDifference){
-    const {socket , user} = this.state
-    socket.emit(UPDATE_SCORE, {user,score})
+    const {socket , user , groupId} = this.state
+    socket.emit(UPDATE_SCORE, {groupId ,user,score})
     const question = getData(timeDifference)
     this.setState({ score , question})
-    this.updateScore(score)
     if(question===undefined){
       this.setState({end:true})
     }
   }
 
-  updateScore(score){
-    const {socket ,  user , groupId} = this.state
-    socket.on(UPDATE_SCORE , ({ groupId,user ,score }))
-  }
 
 
 
   render() {
     const {user , question} = this.state
 
-    return (
+    /*return (
       <div >
         {!user ? <Login2 setUser={this.setUser}/> : this.state.end ? <h1>End of question thread!</h1> :
             <div style={{display:"flex", flexDirection:"row"}}><Question2 date={new Date}
+                            user = {this.state.user}
                             score={this.state.score}
                             question={question}
                             changeQuestion={this.changeQuestion}
@@ -96,7 +93,15 @@ class App extends Component {
             < Dashboard style={{width : "300px"}} users = {this.state.users}   /></div>
         }
       </div>
-    );
+    );*/
+    return<div>
+      {!user ? <Login2 setUser={this.setUser}/> : this.state.end ? <h1>End of question thread!</h1> :<Learn
+        user = {this.state.user}
+        score={this.state.score}
+        question={question}
+        changeQuestion={this.changeQuestion}
+        end={this.state.end}
+    />}</div>
   }
 }
 

@@ -38,7 +38,7 @@ io.on('connection' , (socket)=>{
     socket.on(SET_USER , (user)=>{
         users.push(user)
         console.log(`new user is logged ${user.name}`)
-        io.sockets.emit(UPDATE_USERS , users)
+
     })
 
     //Join the group
@@ -48,12 +48,19 @@ io.on('connection' , (socket)=>{
                 group.users.push(user)
             }
         })
+        io.sockets.emit(UPDATE_USERS , groups[0].users)
         console.log(`New user name ${user.name} joined the group ${groupId}`)
     })
 
-    socket.on(UPDATE_SCORE , ({groupId , userId , score})=>{
-        console.log(score)
-                update(groups,groupId,userId,score)
+    socket.on(UPDATE_SCORE , ({groupId , user, score})=>{
+        const userId = user.id
+                groups[0].users.find(user=>{
+                    if(`${user.id}`===`${userId}`){
+                        user.score = score
+                    }
+                })
+        groups[0].users.sort((a , b)=>a.score>b.score)
+        io.sockets.emit(UPDATE_USERS , groups[0].users)
 
 
     })

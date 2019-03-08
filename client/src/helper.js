@@ -1,39 +1,7 @@
-let mediumQuestion = [{
-    content: "Who is prime minister",
-    options :["Ravi","Modi","Raghu","aman"],
-    correctAns : 1,
-    step : 2,
-    type : "medium"
-},{
-    content: "Who is the former minister",
-    options :["Ravi","Modi","Raghu","aman"],
-    correctAns : 2,
-    step : 2,
-    type : "medium"
-}
-]
+const easyQuestions = require('./easyQuestions')
+const mediumQuestions = require('./mediumQuestions')
+const hardQuestions = require('./hardQuestions')
 
-let easeQuestion = [{
-    content: "2+2=",
-    options :["5","7","4","5"],
-    correctAns : 2,
-    step : 1,
-    type : "easy"
-},{
-    content: "2*2",
-    options :["4","9","4.5","100"],
-    correctAns : 0,
-    step : 1,
-    type : "easy"
-}]
-
-let hardQuestion = [{
-    content: "Who is the CEO of Facebook ?",
-    options :["mark zakar","zakir nayak","azahar khan","zalima"],
-    correctAns : 0,
-    step : 1,
-    type : "hard"
-}]
 
 
 
@@ -52,20 +20,20 @@ function getData(time){
 
     if(time===0){
         return {
-            content: "Who is prime minister",
-            options :["Ravi","Modi","Raghu","aman"],
-            correctAns : 1,
+            content: "Who is the father of computing ?",
+            options :["Bill Gates","Dennis Ritchie","Bjarne Stroustrup","Charles Babbage"],
+            correctAns : 3,
             step : 1,
             type : "easy"
         }
     }
     else if(time>=1 && time<=3){
-        return hardQuestion.pop()
+        return hardQuestions.pop()
     }
     else if(time<5){
-        return mediumQuestion.pop()
+        return mediumQuestions.pop()
     }else{
-        return easeQuestion.pop()
+        return easyQuestions.pop()
     }
 }
 

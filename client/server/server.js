@@ -8,6 +8,20 @@ const server = app.listen(PORT , ()=>{
 })
 
 
+function update(group , gid , uid , score) {
+    for(let i=0;i<group.length;i++){
+        if(`${group[i].id}`===`${gid}`){
+            console.log("grp found")
+            for(let j=0;j<group[i].users.length;j++){
+                if(group[i].users[j].id===uid){
+                    console.log("score update")
+                    group[i].users[j].score = score
+                }
+            }
+        }
+    }
+}
+
 
 let users = []
 let groups = [{
@@ -24,7 +38,7 @@ io.on('connection' , (socket)=>{
     socket.on(SET_USER , (user)=>{
         users.push(user)
         console.log(`new user is logged ${user.name}`)
-        io.socket.emit(UPDATE_USERS , users)
+        io.sockets.emit(UPDATE_USERS , users)
     })
 
     //Join the group
@@ -38,16 +52,9 @@ io.on('connection' , (socket)=>{
     })
 
     socket.on(UPDATE_SCORE , ({groupId , userId , score})=>{
-                groups.find(group=>{
-                    if(group.id===groupId){
-                        group.users.find(user=>{
-                            if(user.id===userId){
-                                user.score = score
-                            }
-                        })
-                    }
-                })
-        console.log(groups)
+        console.log(score)
+                update(groups,groupId,userId,score)
+
 
     })
 

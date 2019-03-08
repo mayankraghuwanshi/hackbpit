@@ -3,9 +3,11 @@ import '../assets/App.css';
 import io from 'socket.io-client'
 
 //components
-import Login from "../components/login";
+//import Login from "../components/login";
 import Login2 from "../components/login2";
-import Question from "../components/question";
+//import Question from "../components/question";
+import Question2 from "../components/question2";
+import Dashboard from "../components/dashboard";
 //helper functions
 const {getData} = require('../helper')
 
@@ -41,8 +43,7 @@ class App extends Component {
     const question = getData(0)
     this.setState({question , socket})
     socket.on(UPDATE_USERS , (users)=>{
-      let len = users.length
-      this.setState({users : len})
+      this.setState({users})
     })
   }
 
@@ -75,7 +76,7 @@ class App extends Component {
 
   updateScore(score){
     const {socket ,  user , groupId} = this.state
-    socket.on(UPDATE_SCORE , ({user , groupId ,score }))
+    socket.on(UPDATE_SCORE , ({ groupId,user ,score }))
   }
 
 
@@ -84,14 +85,15 @@ class App extends Component {
     const {user , question} = this.state
 
     return (
-      <div className="App">
-        {!user ? <Login2 setUser = {this.setUser} /> :this.state.end? <h1>End of question thread!</h1>:
-            <Question date = {new Date}
-                      score = {this.state.score}
-                      question = {question}
-                      changeQuestion = {this.changeQuestion}
-                      end = {this.state.end}
+      <div >
+        {!user ? <Login2 setUser={this.setUser}/> : this.state.end ? <h1>End of question thread!</h1> :
+            <div style={{display:"flex", flexDirection:"row"}}><Question2 date={new Date}
+                            score={this.state.score}
+                            question={question}
+                            changeQuestion={this.changeQuestion}
+                            end={this.state.end}
             />
+            < Dashboard style={{width : "300px"}} users = {this.state.users}   /></div>
         }
       </div>
     );

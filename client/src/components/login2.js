@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import uuidv4 from 'uuid/v4'
 
-class Login2 extends Component {
+class Login extends Component {
     constructor(){
         super()
         this.state = {
@@ -42,4 +42,4 @@ class Login2 extends Component {
 
 
 
-export default Login2;
+export default Login;

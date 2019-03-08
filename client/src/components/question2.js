@@ -10,6 +10,7 @@ class Question extends Component {
         const options = question.options
         const correctAns = question.correctAns
         if(options[correctAns].toString()===e.target.name){
+
             const {date} = this.props
             let timeDifferent = getTimeDif(date , d2)
             //console.log(timeDifferent)
@@ -33,14 +34,12 @@ class Question extends Component {
         const {question} = this.props
         const opt = question.options
         return (
-            <div>
+            <div className="animated fadeIn" style={{width : "800px" , height : "300px" , margin : "100px 0 0 20px" , padding : "30px" , backgroundColor : "#00768087" , borderRadius : "20px"}}>
                 <h1 >{question.content}</h1>
-                <small>{question.type}</small><br/>
-                <button name = {opt[0]}  onClick={this.ans.bind(this)}>{opt[0]}</button>
-                <button name = {opt[1]} onClick={this.ans.bind(this)}>{opt[1]}</button>
-                <button name={opt[2]} onClick={this.ans.bind(this)}>{opt[2]}</button>
-                <button name = {opt[3]} onClick={this.ans.bind(this)}>{opt[3]}</button>
-                <button onClick={this.check.bind(this)}>submit</button>
+                <button name = {opt[0]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-2">{opt[0]}</button>
+                <button name = {opt[1]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-2">{opt[1]}</button>
+                <button name = {opt[2]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-2">{opt[2]}</button>
+                <button name = {opt[3]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-2">{opt[3]}</button>
             </div>
         );
     }

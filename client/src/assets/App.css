@@ -16,6 +16,7 @@
 
 body{
   font-family: 'Nunito', sans-serif;
+  overflow-y:hidden;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

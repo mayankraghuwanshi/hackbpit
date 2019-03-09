@@ -22,6 +22,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
+      learning : true,
       groupId : 123,
       end : false,
       socket : null,
@@ -53,11 +54,11 @@ class App extends Component {
   }
 
 
-  setUser = (user)=>{
-    const {socket , score , groupId} = this.state
+  setUser = ({user , flag})=>{
+    const {socket , score , groupId ,learning} = this.state
     user.score = 0
     socket.emit(SET_USER , user)
-    this.setState({user})
+    this.setState({user , learning:flag})
     //step to join users
     socket.emit(JOIN_GROUP , ({groupId , user}))
 
@@ -89,10 +90,26 @@ class App extends Component {
 
 
   render() {
-    const {user , question , question2} = this.state
-
-    /*return (
-      <div >
+    const {user , question , question2,learning} = this.state
+     if(!user){
+       return <Login2 setUser={this.setUser}/>
+     }
+     else if(learning){
+       return <div>{this.state.end ? <h1>End of question thread!</h1> :<Learn
+           user = {this.state.user}
+           question={question2}
+           changeQuestion={this.changeQuestion2}
+           end={this.state.end}
+       />}</div>
+     }
+     else
+    return (
+      <div  style={{
+        backgroundImage : "url('https://wallpaperaccess.com/full/340434.png')",
+        backgroundSize : "cover",
+        backgroundRepeate : "no-repeate",
+        height : "100vh"
+      }}>
         {!user ? <Login2 setUser={this.setUser}/> : this.state.end ? <h1>End of question thread!</h1> :
             <div style={{display:"flex", flexDirection:"row"}}><Question2 date={new Date}
                             user = {this.state.user}
@@ -104,14 +121,7 @@ class App extends Component {
             < Dashboard style={{width : "300px"}} users = {this.state.users}   /></div>
         }
       </div>
-    );*/
-    return<div>
-      {!user ? <Login2 setUser={this.setUser}/> : this.state.end ? <h1>End of question thread!</h1> :<Learn
-        user = {this.state.user}
-        question={question2}
-        changeQuestion={this.changeQuestion2}
-        end={this.state.end}
-    />}</div>
+    )
   }
 }
 

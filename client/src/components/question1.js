@@ -65,7 +65,7 @@ class Question1 extends Component {
                 <p align="center"><small align = "center">Score : <b>{this.state.score}</b>   Attempt : <b>{this.state.attempt}</b>   Right : <b>{this.state.right}</b>   wrong : <b>{this.state.wrong}</b></small>
                 </p></div>:
                     <div>
-                        <h2 align="center">Your score is {this.state.score}, you have attempted {this.state.attempt} out of which {this.state.right} is <b>right</b>
+                        <h2 align="center">Your score is {this.state.score}, you have attempted { this.state.attempt } out of which {this.state.right } is <b>right</b>
                         and {this.state.wrong} is <b>wrong!</b></h2>
                     </div>
 

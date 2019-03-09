@@ -65,14 +65,13 @@ class Question extends Component {
                 <h2>Hey {this.props.user.name}</h2>
                 <hr/>
                 <h1 >{question.content}</h1>
-                <small>{question.type}</small>
                 <button value={"btn0"} name = {opt[0]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[0]}</button>
                 <button value={"btn1"} name = {opt[1]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[1]}</button>
                 <button value={"btn2"} name = {opt[2]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[2]}</button>
                 <button value={"btn3"} name = {opt[3]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[3]}</button>
                 <hr/>
 
-                <p align="center"><small align = "center">Score : <b>{this.props.score}</b>   Attempt : <b>{this.state.attempt}</b>   Right : <b>{this.state.right}</b>   wrong : <b>{this.state.wrong}</b></small>
+                <p align="center"><small align = "center">Score : <b>{this.props.score}</b>   Attempt : <b>{this.state.attempt}</b>   Right : <b>{this.state.right}</b>   wrong : <b>{this.state.wrong}</b>   type : <b>{question.type}</b></small>
                 </p>
             </div>
         );

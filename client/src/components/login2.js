@@ -12,14 +12,28 @@ class Login extends Component {
     onChange(e){
         this.setState({[e.target.name] : e.target.value})
     }
-    onValidate(){
+    onValidate1(){
         const {name} = this.state
         if(name.length!==0){
             let user = {
                 id : uuidv4(),
                 name : name
             }
-            this.props.setUser(user)
+            //don't set flag to learning
+            this.props.setUser({user , flag : true})
+        }
+        else{
+            this.setState({error : "Please give name!"})
+        }
+    }
+    onValidate2(){
+        const {name} = this.state
+        if(name.length!==0){
+            let user = {
+                id : uuidv4(),
+                name : name
+            }
+            this.props.setUser({user , flag : false})
         }
         else{
             this.setState({error : "Please give name!"})
@@ -40,8 +54,8 @@ class Login extends Component {
                 }} className="text-center border border-light p-5">
                     <input value = {this.state.name} name = "name" onChange={this.onChange.bind(this)}  type="text" id="defaultContactFormName" className="form-control mb-4" placeholder="Name"/>
                     <input value = "Math"  disabled={true} className="form-control mb-4" placeholder="Maths"/>
-
-                    <button className="btn btn-info btn-block" onClick={this.onValidate.bind(this)} type="submit">Enter</button>
+                    <button className="btn btn-info btn-block" onClick={this.onValidate1.bind(this)} type="submit">Learn</button>
+                    <button className="btn btn-info btn-block" onClick={this.onValidate2.bind(this)} type="submit">Test</button>
                 </div>
             </div>
         );

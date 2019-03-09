@@ -134,9 +134,9 @@ function getData2(time){
 
     if(time===0){
         return {
-            content: "Who is the father of computing ?  fake",
-            options :["Bill Gates","Dennis Ritchie","Bjarne Stroustrup","Charles Babbage"],
-            correctAns : 3,
+            content: "Which one is used in thumbnail of this video ?",
+            options :["Rectangle","Circle","Triangle","Line"],
+            correctAns : 1,
             step : 1,
             type : "easy"
         }

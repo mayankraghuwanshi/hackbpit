@@ -6,7 +6,7 @@ class Learn extends Component {
     constructor(){
         super()
         this.state={
-               questionShow : true,
+               questionShow : false,
                 play : false
                 }
                 this.addQuestion = this.addQuestion.bind(this)

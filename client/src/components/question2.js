@@ -54,7 +54,7 @@ class Question extends Component {
                 , padding : "30px"
                 , backgroundColor : "#00768087"
                 , borderRadius : "20px"
-                ,backgroundImage : "url('http://www.techandall.com/wp-content/uploads/2013/10/techandall_wallpaper_1.jpg')",
+                ,backgroundImage : "url('https://wallpaperaccess.com/full/340434.png')",
                 backgroundSize : "cover",
                 backgroundRepeate : "no-repeate",
                 position : "relative",

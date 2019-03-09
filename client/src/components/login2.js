@@ -29,7 +29,15 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <div style={{width : "500px" , margin : "190px auto" , display : "block", border : "2px solid"}} className="text-center border border-light p-5">
+                <div style={{width : "500px" ,
+                    margin : "190px auto" ,
+                    display : "block",
+                    border : "2px solid",
+                    backgroundImage : "url('https://wallpaperaccess.com/full/340434.png')",
+                    backgroundSize : "cover",
+                    backgroundRepeate : "no-repeate",
+                    borderRadius : "20px"
+                }} className="text-center border border-light p-5">
                     <input value = {this.state.name} name = "name" onChange={this.onChange.bind(this)}  type="text" id="defaultContactFormName" className="form-control mb-4" placeholder="Name"/>
                     <input value = "Math"  disabled={true} className="form-control mb-4" placeholder="Maths"/>
 

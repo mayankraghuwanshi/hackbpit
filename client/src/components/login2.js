@@ -54,9 +54,10 @@ class Login extends Component {
                 }} className="text-center border border-light p-5">
                     <input value = {this.state.name} name = "name" onChange={this.onChange.bind(this)}  type="text" id="defaultContactFormName" className="form-control mb-4" placeholder="Name"/>
                     <input value = "Math"  disabled={true} className="form-control mb-4" placeholder="Maths"/>
-                    <button className="btn btn-info btn-block" onClick={this.onValidate1.bind(this)} type="submit">Learn</button>
-                    <button className="btn btn-info btn-block" onClick={this.onValidate2.bind(this)} type="submit">Test</button>
-                </div>
+                    <div className={"row"}>
+                        <div className={"col"}><button className="btn btn-info btn-block" onClick={this.onValidate1.bind(this)} type="submit">Learn</button></div>
+                        <div className={"col"}><button className="btn btn-info btn-block" onClick={this.onValidate2.bind(this)} type="submit">Test</button></div>
+                    </div></div>
             </div>
         );
     }

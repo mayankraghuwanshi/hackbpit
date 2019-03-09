@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="369219ce-07e7-42ba-b2be-ad374def2b1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/question1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/question2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/question2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,16 +35,16 @@
         <entry file="file://$PROJECT_DIR$/src/helper.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
-              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/question2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="58" column="49" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="58" selection-end-column="49" />
+            <state relative-caret-position="290">
+              <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -83,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/question1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="67" column="117" selection-start-line="67" selection-start-column="117" selection-end-line="67" selection-end-column="117" />
+            <state relative-caret-position="290">
+              <caret line="68" column="68" selection-start-line="67" selection-start-column="24" selection-end-line="68" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -152,12 +148,12 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/learn.js" />
         <option value="$PROJECT_DIR$/src/helper2.js" />
-        <option value="$PROJECT_DIR$/src/components/login2.js" />
-        <option value="$PROJECT_DIR$/src/components/question2.js" />
         <option value="$PROJECT_DIR$/src/components/dashboard.js" />
         <option value="$PROJECT_DIR$/src/container/App.js" />
         <option value="$PROJECT_DIR$/src/assets/App.css" />
+        <option value="$PROJECT_DIR$/src/components/login2.js" />
         <option value="$PROJECT_DIR$/src/components/question1.js" />
+        <option value="$PROJECT_DIR$/src/components/question2.js" />
       </list>
     </option>
   </component>
@@ -182,34 +178,6 @@
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -228,6 +196,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mayank Raghuvanshi\Desktop\hackbpit\client\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -265,12 +238,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552048452200</updated>
-      <workItem from="1552048453872" duration="47080000" />
+      <workItem from="1552048453872" duration="48724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47080000" />
+    <option name="totallyTimeSpent" value="48724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,7 +256,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -295,7 +267,7 @@
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32857144" />
-      <window_info anchor="bottom" x="14" y="299" width="1508" height="225" id="Run" order="6" visible="true" weight="0.5339286" />
+      <window_info anchor="bottom" x="14" y="299" width="1508" height="225" id="Run" order="6" visible="true" weight="0.15357143" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -404,17 +376,7 @@
     <entry file="file://$PROJECT_DIR$/src/helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/learn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -425,27 +387,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/login2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="99" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/question2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="58" column="49" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="58" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -467,10 +412,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/learn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/login2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="58" column="161" selection-start-line="58" selection-start-column="161" selection-end-line="58" selection-end-column="161" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/question1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="67" column="117" selection-start-line="67" selection-start-column="117" selection-end-line="67" selection-end-column="117" />
+        <state relative-caret-position="290">
+          <caret line="68" column="68" selection-start-line="67" selection-start-column="24" selection-end-line="68" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/question2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
         </state>
       </provider>
     </entry>

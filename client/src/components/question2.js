@@ -62,7 +62,7 @@ class Question extends Component {
             }}
 
             >
-                <h2>Hey {this.props.user.name}</h2>
+                {this.state.attempt<=9 ?<div><h2>Hey {this.props.user.name}</h2>
                 <hr/>
                 <h1 >{question.content}</h1>
                 <button value={"btn0"} name = {opt[0]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[0]}</button>
@@ -72,7 +72,10 @@ class Question extends Component {
                 <hr/>
 
                 <p align="center"><small align = "center">Score : <b>{this.props.score}</b>   Attempt : <b>{this.state.attempt}</b>   Right : <b>{this.state.right}</b>   wrong : <b>{this.state.wrong}</b>   type : <b>{question.type}</b></small>
-                </p>
+                </p></div>:
+                    <div><h2 align="center" style={{marginTop : "90px"}}>Your score is {this.props.score}, you have attempted { this.state.attempt } out of which {this.state.right } is <b>right</b>
+                        and {this.state.wrong} is <b>wrong!</b></h2></div>
+                }
             </div>
         );
     }

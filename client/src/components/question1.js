@@ -62,10 +62,10 @@ class Question1 extends Component {
                 <button value={"btn2"} name = {opt[2]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[2]}</button>
                 <button value={"btn3"} name = {opt[3]} onClick={this.ans.bind(this)} type="button" className="btn btn-light m-4">{opt[3]}</button>
                 <hr/>
-                <p align="center"><small align = "center">Score : <b>{this.state.score}</b>   Attempt : <b>{this.state.attempt}</b>   Right : <b>{this.state.right}</b>   wrong : <b>{this.state.wrong}</b></small>
+                <p align="center"><small align = "center">Score : <b>{this.state.score}</b>   Attempt : <b>{this.state.attempt}</b>   Right : <b>{this.state.right}</b>   wrong : <b>{this.state.wrong}  level : {question.type}</b></small>
                 </p></div>:
                     <div>
-                        <h2 align="center">Your score is {this.state.score}, you have attempted { this.state.attempt } out of which {this.state.right } is <b>right</b>
+                        <h2 align="center" style={{marginTop : "90px"}}>Your score is {this.state.score}, you have attempted { this.state.attempt } out of which {this.state.right } is <b>right</b>
                         and {this.state.wrong} is <b>wrong!</b></h2>
                     </div>
 

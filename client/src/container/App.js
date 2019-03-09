@@ -11,6 +11,7 @@ import Dashboard from "../components/dashboard";
 import Learn from "../components/learn";
 //helper functions
 const {getData} = require('../helper')
+const {getData2} = require('../helper2')
 
 const {SET_USER , JOIN_GROUP , UPDATE_SCORE , UPDATE_USERS} = require('../events')
 
@@ -27,10 +28,12 @@ class App extends Component {
       user : null,
       question : null,
       score : 0,
-      users : 0
+      users : 0,
+      question2 : null
     }
     this.setUser = this.setUser.bind(this)
     this.changeQuestion = this.changeQuestion.bind(this)
+    this.changeQuestion2 = this.changeQuestion2.bind(this)
   }
   componentWillMount() {
     this.initSocket()
@@ -42,7 +45,8 @@ class App extends Component {
       console.log("connected :)")
     })
     const question = getData(0)
-    this.setState({question , socket})
+    const question2 = getData2(0)
+    this.setState({question, question2, socket})
     socket.on(UPDATE_USERS , (users)=>{
       this.setState({users})
     })
@@ -73,12 +77,19 @@ class App extends Component {
       this.setState({end:true})
     }
   }
+  changeQuestion2(timeDifference){
+    const question2 = getData2(timeDifference)
+    this.setState({ question2})
+    if(question2===undefined){
+      this.setState({end:true})
+    }
+  }
 
 
 
 
   render() {
-    const {user , question} = this.state
+    const {user , question , question2} = this.state
 
     /*return (
       <div >
@@ -97,9 +108,8 @@ class App extends Component {
     return<div>
       {!user ? <Login2 setUser={this.setUser}/> : this.state.end ? <h1>End of question thread!</h1> :<Learn
         user = {this.state.user}
-        score={this.state.score}
-        question={question}
-        changeQuestion={this.changeQuestion}
+        question={question2}
+        changeQuestion={this.changeQuestion2}
         end={this.state.end}
     />}</div>
   }

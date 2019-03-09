@@ -1,4 +1,4 @@
-let qe = [{
+const easyQuestions = [{
     content : "Area of circle",
     options : ["pi*r^2" , "2*pi" , "pi*r^3" , "pi"],
     correctAns : 0,
@@ -36,7 +36,7 @@ let qe = [{
 ]
 
 
-let mq = [
+const mediumQuestions = [
     {
         content : "A line which connects any two points on a circle is known as",
         options : ["Perimeter" , "diameter" , "chord" , "radius"],
@@ -73,8 +73,7 @@ let mq = [
         type : "easy"
     },
 ]
-
-let hq = [
+const hardQuestions = [
     {
         content : "Name the center of this circle.",
         url : "https://www.mathgoodies.com/sites/default/files/lesson_images/circle_examples.gif",
@@ -115,9 +114,44 @@ let hq = [
         step : 2,
         type : "hard"
     },
-
-
-
-
-
 ]
+
+
+
+
+function getTimeDif(d1,d2) {
+    let s1 = d1.getSeconds()*1000
+    let s2 = d2.getSeconds()*1000
+    let m1 = d1.getMilliseconds()
+    let m2 = d2.getMilliseconds()
+    let t1 = s1+m1
+    let t2 = s2+m2
+
+    return (t2-t1)/1000
+}
+
+function getData2(time){
+
+    if(time===0){
+        return {
+            content: "Who is the father of computing ?  fake",
+            options :["Bill Gates","Dennis Ritchie","Bjarne Stroustrup","Charles Babbage"],
+            correctAns : 3,
+            step : 1,
+            type : "easy"
+        }
+    }
+    else if(time>=1 && time<=3){
+        return hardQuestions.pop()
+    }
+    else if(time<5){
+        return mediumQuestions.pop()
+    }else{
+        return easyQuestions.pop()
+    }
+}
+
+module.exports = {
+    getTimeDif,
+    getData2
+}
